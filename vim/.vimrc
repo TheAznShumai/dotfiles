@@ -26,7 +26,8 @@ set incsearch "Highlight as term is being typed
 set shortmess=atI "Reduces prompts check :help shortmess for more info
 "set list!
 "set listchars=tab:>-,trail:~,eol:$ "Makes these characters visible
-set statusline=2 "Always show the statusline
+"set statusline=2 "Always show the statusline
+set statusline=%{fugitive#statusline()} "Fugitive status line
 
 set foldmethod=indent "Enable code folding - za to code fold
 set foldlevel=99 "Enable code folding
@@ -36,7 +37,6 @@ au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
-%{fugitive#statusline()} "Enable fugitive in status bar
 """""""""""""""
 "KEY BINDINGS"
 """""""""""""""
