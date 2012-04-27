@@ -10,7 +10,7 @@ call pathogen#infect()
 syntax on "Syntax highlighting
 filetype plugin indent on "Filetype highlighting
 
-colorscheme jellybeans
+colorscheme jellybeans "Colorscheme to pick
 set background=dark
 
 set title "Show filename in titlebar
@@ -28,6 +28,7 @@ set shortmess=atI "Reduces prompts check :help shortmess for more info
 "set listchars=tab:>-,trail:~,eol:$ "Makes these characters visible
 "set statusline=2 "Always show the statusline
 set statusline=%{fugitive#statusline()} "Fugitive status line
+set laststatus=2 "Show statusline
 
 set foldmethod=indent "Enable code folding - za to code fold
 set foldlevel=99 "Enable code folding
@@ -73,6 +74,7 @@ set smartcase "Case sensitive search if theres a capital letter in search string
 
 set wildmenu "Show more than 1 item for tab completion
 set wildmode=list:longest  "Tab completes up to point of ambiguityi
+set encoding=utf-8 "Set encoding type
 
 " Add support for virtualenv code completion
 py << EOF
