@@ -33,6 +33,10 @@ set laststatus=2 "Show statusline
 set foldmethod=indent "Enable code folding - za to code fold
 set foldlevel=99 "Enable code folding
 
+set bs=2 "Backspace overrides anything in INSERT mode
+set ttyfast "Better scrolling
+set noerrorbells "No noise
+
 "Tab completion
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
@@ -58,6 +62,7 @@ map <leader>n :NERDTreeToggle<CR> "Turn on NERD Tree
 map <leader>j :RopeGotoDefinition<CR> "RopeVIM keybinding to jump to definiton
 map <leader>r :RopeRename<CR> "global rename
 nmap <leader>a <Esc>:Ack! "Ack binding
+map <F5> :TComment<CR>
 """""""""""""""""""
 "Misc Options
 """""""""""""""""""
@@ -76,6 +81,7 @@ set wildmenu "Show more than 1 item for tab completion
 set wildmode=list:longest  "Tab completes up to point of ambiguityi
 set encoding=utf-8 "Set encoding type
 
+let NERDTreeShowHidden=1 "Toggle showing hidden files using I in NERDTree
 " Add support for virtualenv code completion
 py << EOF
 import os.path
