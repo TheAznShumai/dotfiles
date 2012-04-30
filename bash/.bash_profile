@@ -20,8 +20,8 @@ export BASH_IT_THEME='bobby'
 export GIT_HOSTING='natsumi@bitbucket.org'
 
 # Set my editor and git editor
-export EDITOR="mvim"
-export GIT_EDITOR='mvim'
+export EDITOR="mvim -f"
+export GIT_EDITOR='mvim -f'
 
 # Set the path nginx
 export NGINX_PATH='/opt/nginx'
