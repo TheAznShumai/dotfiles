@@ -15,7 +15,7 @@ set background=dark
 set gfn=Menlo\ Regular:h14 "Font settings for OSX
 "Set font for Windows
 if has("gui_running") && exists("$COMSPEC")
-    set gfn=Conolas:h14
+    set gfn=Consolas:h11
 endif
 
 set title "Show filename in titlebar
