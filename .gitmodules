@@ -52,3 +52,6 @@
 [submodule "vim/bundle/tComment"]
 	path = vim/bundle/tComment
 	url = https://github.com/vim-scripts/tComment.git
+[submodule "bash/bash-it"]
+	path = bash/bash-it
+	url = https://github.com/revans/bash-it.git
