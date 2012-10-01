@@ -39,9 +39,6 @@ export TODO="t"
 # https://github.com/xvzf/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
-# Load Bash It
-source $BASH_IT/bash_it.sh
-
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
@@ -52,3 +49,6 @@ export VIRTUALENVWRAPPER_LOG_DIR=$HOME/dev/.virtualenv
 export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/dev/.virtualenv
 export WORKON_HOME=$HOME/dev
 source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+
+# Load Bash It
+source $BASH_IT/bash_it.sh
