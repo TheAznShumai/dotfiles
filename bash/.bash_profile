@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-#Set VirtualEnv work dir
-export WORKON_HOME=$HOME/coding
-
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
@@ -44,3 +41,14 @@ export TODO="t"
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+
+#Set VirtualEnv work dir
+export VIRTUALENVWRAPPER_LOG_DIR=$HOME/dev/.virtualenv
+export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/dev/.virtualenv
+export WORKON_HOME=$HOME/dev
+source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
