@@ -42,6 +42,7 @@ export TODO="t"
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export PATH
 
 #Set VirtualEnv work dir
