@@ -43,6 +43,7 @@ export TODO="t"
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+PATH="/usr/local/mysql-5.5.28-osx10.6-x86_64/bin:$PATH"
 export PATH
 
 #Set VirtualEnv work dir

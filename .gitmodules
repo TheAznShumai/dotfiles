@@ -55,3 +55,6 @@
 [submodule "bash/bash-it"]
 	path = bash/bash-it
 	url = https://github.com/revans/bash-it.git
+[submodule "vim/pathogen"]
+	path = vim/pathogen
+	url = https://github.com/tpope/vim-pathogen.git
