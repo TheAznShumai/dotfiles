@@ -60,7 +60,7 @@ set softtabstop=4 "Make backspace go back 4 spaces
 set colorcolumn=80 "Mark colum 80
 
 "List of files to ignore
-set wildignore+=*.git,*.svn,*.o,*.obj,*.egg-info,*.tmp,*.bak,*.swp
+set wildignore+=*.git,*.svn,*.o,*.obj,*.egg-info,*.tmp,*.bak,*.swp,*.pyc
 """""""""""""""
 "KEY BINDINGS"
 """""""""""""""
