@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#/usr/local should be before anything else
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
