@@ -22,7 +22,10 @@ set title "Show filename in titlebar
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
 set ruler "Set Ruler
-set nu "Line numbers on
+# hybrid number
+set relativenumber
+set number "Line numbers on
+
 set nowrap "Line wrapping off
 set cursorline "Highlights current line
 set scrolloff=3 "Number of lines to below cursor to start auto scroll
