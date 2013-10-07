@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-#/usr/local should be before anything else
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
 # Load RVM, if you are using it
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add rvm gems and nginx to the path
 export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
+
+#/usr/local should be before anything else
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Path to the bash it configuration
 export BASH_IT=$HOME/.bash_it
@@ -44,7 +44,7 @@ export TODO="t"
 
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+# PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 PATH="/usr/local/mysql-5.5.28-osx10.6-x86_64/bin:$PATH"
 export PATH
@@ -53,7 +53,8 @@ export PATH
 export VIRTUALENVWRAPPER_LOG_DIR=$HOME/dev/.virtualenv
 export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/dev/.virtualenv
 export WORKON_HOME=$HOME/dev
-source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+# source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
