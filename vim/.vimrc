@@ -22,7 +22,7 @@ set title "Show filename in titlebar
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
 set ruler "Set Ruler
-# hybrid number
+"Enable hybrid number mode
 set relativenumber
 set number "Line numbers on
 
