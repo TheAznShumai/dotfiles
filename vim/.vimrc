@@ -33,7 +33,8 @@ set hlsearch "Highlight search terms
 set incsearch "Highlight as term is being typed
 set shortmess=atI "Reduces prompts check :help shortmess for more info
 "set list!
-"set listchars=tab:>-,trail:~,eol:$ "Makes these characters visible
+set listchars=tab:▸\ ,eol:¬
+
 "set statusline=2 "Always show the statusline
 set statusline=%{fugitive#statusline()} "Fugitive status line
 set laststatus=2 "Show statusline
@@ -70,7 +71,7 @@ set wildignore+=*.git,*.svn,*.o,*.obj,*.egg-info,*.tmp,*.bak,*.swp,*.pyc
 let mapleader=','
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>T :CommandTFlush<cr>\|:CommandT %%<cr>
-nmap <silent> <leader>s :set nolist!<CR> "Toggle visible tab/trailing space with ,s
+nmap <silent> <leader>l :set list!<CR> "Toggle visible tab/trailing space with ,l
 "Remape keys to navigate windows use Ctrl+key
 map <c-j> <c-w>j
 map <c-k> <c-w>k
