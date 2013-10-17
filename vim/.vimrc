@@ -29,8 +29,6 @@ set number "Line numbers on
 set nowrap "Line wrapping off
 set cursorline "Highlights current line
 set scrolloff=3 "Number of lines to below cursor to start auto scroll
-set hlsearch "Highlight search terms
-set incsearch "Highlight as term is being typed
 set shortmess=atI "Reduces prompts check :help shortmess for more info
 "set list!
 set listchars=tab:▸\ ,eol:¬
@@ -97,9 +95,16 @@ set noswapfile     "no swap files
 
 set timeoutlen=250 "Time to wait after ESC (default causes an annoying delay)
 set history=256
+
+"""""""""""""""""""
+" Search Options
+"""""""""""""""""""
 set ignorecase "Case insensitive search
+set hlsearch "Highlight search terms
+set incsearch "Highlight as term is being typed
 set smartcase "Case sensitive search if theres a capital letter in search string
 
+set shortmess=atI "Reduces prompts check :help shortmess for more info
 set wildmenu "Show more than 1 item for tab completion
 set wildmode=list:longest  "Tab completes up to point of ambiguityi
 set encoding=utf-8 "Set encoding type
