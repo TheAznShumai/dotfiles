@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Load RVM, if you are using it
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+# [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 # Add rvm gems and nginx to the path
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
-
+# export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
+export PATH="$HOME/.rbenv/bin:$PATH"
 #/usr/local should be before anything else
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
@@ -42,9 +42,6 @@ export TODO="t"
 # https://github.com/xvzf/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-# PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 PATH="/usr/local/mysql-5.5.28-osx10.6-x86_64/bin:$PATH"
 export PATH
@@ -57,3 +54,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+
+#Load rbenv
+eval "$(rbenv init -)"

@@ -5,11 +5,18 @@ git submodule update
 git submodule foreach git submodule init
 git submodule foreach git submodule update
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle; \
-curl -so ~/.vim/autoload/pathogen.vim \
-    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+# setup rbenv
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+git clone -- git://github.com/carsomyr/rbenv-bundler.git \
+      ~/.rbenv/plugins/bundler
+git clone https://github.com/sstephenson/ruby-build.git \
+      ~/.rbenv/plugins/ruby-build
 
+mkdir -p ~/dev/.virtualenv
+mkdir -p ~/.vim/autoload ~/.vim/bundle; \
+    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 rmdir ~/.vim/bundle
+
 ln -s ~/dev/dotfiles/vim/bundle ~/.vim/
 ln -s ~/dev/dotfiles/vim/snippets ~/.vim/
 ln -s ~/dev/dotfiles/vim/.vimrc ~/
