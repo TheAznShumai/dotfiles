@@ -46,9 +46,6 @@
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "vim/bundle/powerline"]
-	path = vim/bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/bundle/tComment"]
 	path = vim/bundle/tComment
 	url = https://github.com/vim-scripts/tComment.git
