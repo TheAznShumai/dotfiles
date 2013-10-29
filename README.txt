@@ -18,3 +18,4 @@ make sure to use ls -alh
 3. install brew
 4. install rbenv
 5. install ruby 1.8.7 and build command-t module
+CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl` --without-tcl --without-tk" rbenv install
