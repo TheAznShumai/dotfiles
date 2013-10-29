@@ -11,12 +11,10 @@ git config --global user.email natsumi@gmail.com
 Dot files are hidden when using ls
 make sure to use ls -alh
 
-======
-Python mountain lion fixes:
-=====
-curl -O http://python-distribute.org/distribute_setup.py
-python distribute_setup.py
-easy_install pip
-pip install virtualenv
-easy_install virtualenvwrapper
+=======
 
+1. install xcode
+2. install command line tools
+3. install brew
+4. install rbenv
+5. install ruby 1.8.7 and build command-t module
