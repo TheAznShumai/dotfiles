@@ -17,6 +17,8 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle; \
     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 rmdir ~/.vim/bundle
 
+git config --global core.excludesfile  ~/dev/dotfiles/git/.gitignore_global
+
 ln -s ~/dev/dotfiles/vim/bundle ~/.vim/
 ln -s ~/dev/dotfiles/vim/snippets ~/.vim/
 ln -s ~/dev/dotfiles/vim/.vimrc ~/
