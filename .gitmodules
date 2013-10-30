@@ -58,3 +58,6 @@
 [submodule "vim/bundle/mako-bundle"]
 	path = vim/bundle/mako-bundle
 	url = https://github.com/sophacles/vim-bundle-mako.git
+[submodule "vim/bundle/powerline"]
+	path = vim/bundle/powerline
+	url = https://github.com/Lokaltog/powerline.git
