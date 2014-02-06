@@ -50,15 +50,15 @@ let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
 "Tab spacing
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set softtabstop=4 "Make backspace go back 4 spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab "convert tabs to whitepsace
+set softtabstop=2 "Make backspace go back 4 spaces
 
 "If you want the tab settings to be based on a per file-type basis use the the following: 
 "autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
-"autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
-"
+autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
+
 set colorcolumn=80 "Mark colum 80
 
 "List of files to ignore
