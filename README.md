@@ -1,3 +1,9 @@
+### Initial System Conf 
+====
+Change Hostname: 
+	sudo scutil --set HostName
+
+
 ###Adding and Updating Submodule###
 =======
 git submodule add <remote_repository> vim/bundle/repo
