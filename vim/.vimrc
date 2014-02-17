@@ -12,7 +12,7 @@ filetype plugin indent on "Filetype highlighting
 
 colorscheme jellybeans "Colorscheme to pick
 set background=dark
-set gfn=Menlo\ Regular:h14 "Font settings for OSX
+set gfn=Menlo\ for\ Powerline:h14 "Font settings for OSX
 "Set font for Windows
 if has("gui_running") && exists("$COMSPEC")
     set gfn=Consolas:h11
