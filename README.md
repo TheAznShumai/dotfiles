@@ -26,17 +26,48 @@ Remove the symbolic link from bundle
 Remove any descriptions from the README.md file
 =======
 
-Dot files are hidden when using ls
-make sure to use ls -alh
 
-=======
+### Homebrew Install
+====
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-1. install xcode
-2. install command line tools
-3. install brew
-4. install rbenv
-5. install ruby 1.8.7 and build command-t module
-CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl` --without-tcl --without-tk" rbenv install
-6. brew install node
-7. npm install coffee-script
-8. npm install jshint
+### Ruby Setup
+  brew install rbenv ruby-build
+  rbenv install 2.1.0
+  rbenv global 2.1.0
+  gem install bundler
+  rbenv rehash
+
+### Python Setup
+  brew install python
+  pip install virtualenv
+  pip install virtualenvwrapper
+  pip install youtube-dl
+
+### Node Install
+====
+  brew install node
+  npm install -g coffee-script
+
+### Synastic Setup
+====
+  pip install flake8
+  gem install ruby-lint
+  gem install rubocop
+  gem install scss-lint
+  gem install haml-lint
+  npm install -g coffeelint
+  npm install -g jshint
+  npm install -g jsonlint
+  
+### Utilities
+====
+  brew install vim macvim
+  brew install wget htop tmux
+
+### Postgres.app
+  http://postgresapp.com/
+
+### Notes
+====
+  1. Make sure you edit the vimrc file and update the powerline paths

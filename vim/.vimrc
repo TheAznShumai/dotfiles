@@ -110,6 +110,7 @@ set wildmode=list:longest  "Tab completes up to point of ambiguityi
 set encoding=utf-8 "Set encoding type
 
 let NERDTreeShowHidden=1 "Toggle showing hidden files using I in NERDTree
+
 " Add support for virtualenv code completion
 py << EOF
 import os.path
@@ -122,5 +123,12 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this, dict(__file__=activate_this))
 EOF
 
+""""""""""""""""""""""
+" Powerline Config
+""""""""""""""""""""""
 set rtp+=$HOME/dev/dotfiles/vim/bundle/powerline/powerline/bindings/vim
 let g:Powerline_symbols="fancy"
+
+""""""""""""""""""""""
+" Syntastic Config
+""""""""""""""""""""""
