@@ -132,3 +132,10 @@ let g:Powerline_symbols="fancy"
 """"""""""""""""""""""
 " Syntastic Config
 """"""""""""""""""""""
+let g:syntastic_python_checkers=['flake8'] "Python syntax checker
+let g:syntastic_ruby_checkers=['rubylint', 'rubocop'] "Ruby
+let g:syntastic_scss_checkers=['scss_lint'] "SASS CSS
+let g:syntastic_haml_checkers=['haml-lint'] "HAML
+let g:syntastic_json_checkers=['jsonlint'] "JSON
+let g:syntastic_coffee_checkers=['coffeelint']
+let g:syntastic_javascript_checkers=['jshint']
