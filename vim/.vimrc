@@ -139,3 +139,23 @@ let g:syntastic_haml_checkers=['haml-lint'] "HAML
 let g:syntastic_json_checkers=['jsonlint'] "JSON
 let g:syntastic_coffee_checkers=['coffeelint']
 let g:syntastic_javascript_checkers=['jshint']
+
+
+"""""""""""""""""""""
+" Functions
+"""""""""""""""""""""
+
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
