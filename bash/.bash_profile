@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-# Load RVM, if you are using it
-# [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+# Mac OS X uses path_helper to preload PATH, clear it out first
+if [ -x /usr/libexec/path_helper ]; then
+    PATH=''
+    eval `/usr/libexec/path_helper -s`
+fi
 
-# Add rvm gems and nginx to the path
-# export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 export PATH="$HOME/.rbenv/bin:$PATH"
 #/usr/local should be before anything else
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -38,22 +39,26 @@ export IRC_CLIENT='irssi'
 
 export TODO="t"
 
-# Set vcprompt executable path for scm advance info in prompt (demula theme)
-# https://github.com/xvzf/vcprompt
-#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
-
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 PATH="/usr/local/mysql-5.5.28-osx10.6-x86_64/bin:$PATH"
 export PATH
 
-#Set VirtualEnv work dir
-export VIRTUALENVWRAPPER_LOG_DIR=$HOME/dev/.virtualenv
-export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/dev/.virtualenv
-export WORKON_HOME=$HOME/dev
-source /usr/local/bin/virtualenvwrapper.sh
-
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
-#Load rbenv
-eval "$(rbenv init -)"
+# if Virtualenv is install
+if which rbenv &> /dev/null; then
+  export VIRTUALENVWRAPPER_LOG_DIR=$HOME/dev/.virtualenv
+  export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/dev/.virtualenv
+  export WORKON_HOME=$HOME/dev
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# if rbenv is present, configure it for use
+if which rbenv &> /dev/null; then
+    # Put the rbenv entry at the front of the line
+    export PATH="$HOME/.rbenv/bin:$PATH"
+
+    # enable shims and auto-completion
+    eval "$(rbenv init -)"
+fi
