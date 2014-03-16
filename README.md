@@ -65,6 +65,7 @@ Remove any descriptions from the README.md file
   brew install vim macvim
   brew install wget htop tmux
   brew install git
+  brew install ctags
 
 ### Postgres.app
   http://postgresapp.com/

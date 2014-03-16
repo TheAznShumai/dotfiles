@@ -55,7 +55,7 @@ set shiftwidth=2
 set expandtab "convert tabs to whitepsace
 set softtabstop=2 "Make backspace go back 4 spaces
 
-"If you want the tab settings to be based on a per file-type basis use the the following: 
+"If you want the tab settings to be based on a per file-type basis use the the following:
 "autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 
@@ -139,3 +139,41 @@ let g:syntastic_haml_checkers=['haml-lint'] "HAML
 let g:syntastic_json_checkers=['jsonlint'] "JSON
 let g:syntastic_coffee_checkers=['coffeelint']
 let g:syntastic_javascript_checkers=['jshint']
+
+
+"""""""""""""""""""""
+" Functions
+"""""""""""""""""""""
+
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" Add key mapings to skip to next code fol
+" Use <leader>zj and <leader>zk
+function! NextClosedFold(dir)
+    let cmd = 'norm!z' . a:dir
+    let view = winsaveview()
+    let [l0, l, open] = [0, view.lnum, 1]
+    while l != l0 && open
+        exe cmd
+        let [l0, l] = [l, line('.')]
+        let open = foldclosed(l) < 0
+    endwhile
+    if open
+        call winrestview(view)
+    endif
+endfunction
+
+nnoremap <silent> <leader>zj :call NextClosedFold('j')<cr>
+nnoremap <silent> <leader>zk :call NextClosedFold('k')<cr>
