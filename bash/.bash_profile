@@ -47,7 +47,7 @@ export PATH
 source $BASH_IT/bash_it.sh
 
 # if Virtualenv is install
-if which rbenv &> /dev/null; then
+if which virtualenvwrapper.sh &> /dev/null; then
   export VIRTUALENVWRAPPER_LOG_DIR=$HOME/dev/.virtualenv
   export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/dev/.virtualenv
   export WORKON_HOME=$HOME/dev
