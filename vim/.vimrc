@@ -12,7 +12,7 @@ filetype plugin indent on "Filetype highlighting
 
 colorscheme jellybeans "Colorscheme to pick
 set background=dark
-set gfn=Menlo\ Regular:h14 "Font settings for OSX
+set gfn=Menlo\ for\ Powerline:h14 "Font settings for OSX
 "Set font for Windows
 if has("gui_running") && exists("$COMSPEC")
     set gfn=Consolas:h11
@@ -122,5 +122,5 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this, dict(__file__=activate_this))
 EOF
 
-set rtp+=$HOME/dev/dotfiles/vim/bundle/powerline/powerline/bindings/vim
+set rtp+=$HOME/devWork/dotfiles/vim/bundle/powerline/powerline/bindings/vim
 let g:Powerline_symbols="fancy"
