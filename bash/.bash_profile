@@ -50,7 +50,7 @@ export PATH
 export VIRTUALENVWRAPPER_LOG_DIR=$HOME/dev/.virtualenv
 export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/dev/.virtualenv
 export WORKON_HOME=$HOME/dev
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
