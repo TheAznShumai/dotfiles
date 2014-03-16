@@ -11,3 +11,5 @@ ln -s $PWD/vim/snippets ~/.vim/
 ln -s $PWD/vim/.vimrc ~/
 ln -s $PWD/bash/bash-it/ ~/.bash_it
 ln -s $PWD/bash/.bash_profile ~/
+ln -s $PWD/rails/.gemrc ~/
+ln -s $PWD/rails/.pryrc ~/
