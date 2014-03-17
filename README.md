@@ -1,6 +1,6 @@
-### Initial System Conf 
+### Initial System Conf
 ====
-Change Hostname: 
+Change Hostname:
 	sudo scutil --set HostName
 
 
@@ -48,6 +48,11 @@ Remove any descriptions from the README.md file
 ====
   brew install node
   npm install -g coffee-script
+  npm install -g grunt-cli
+  npm install -g yeoman
+  npm install -g grunt-contrib-compass
+  npm install -g generator-ember
+
 
 ### Synastic Setup
 ====
@@ -59,7 +64,7 @@ Remove any descriptions from the README.md file
   npm install -g coffeelint
   npm install -g jshint
   npm install -g jsonlint
-  
+
 ### Utilities
 ====
   brew install vim macvim
