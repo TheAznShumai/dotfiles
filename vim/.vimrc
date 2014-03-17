@@ -61,8 +61,8 @@ autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 
 set colorcolumn=80 "Mark colum 80
 
-"List of files to ignore
-set wildignore+=*.git,*.svn,*.o,*.obj,*.egg-info,*.tmp,*.bak,*.swp,*.pyc,tmp/**
+"List of files to ignore (command T)
+set wildignore+=*.git,*.svn,*.o,*.obj,*.egg-info,*.tmp,*.bak,*.swp,*.pyc,app/assets/images/**,public/**,tmp/**
 """""""""""""""
 "KEY BINDINGS"
 """""""""""""""
