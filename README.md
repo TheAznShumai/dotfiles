@@ -68,7 +68,7 @@ Remove any descriptions from the README.md file
 ### Utilities
 ====
   brew install vim macvim
-  brew install wget htop tmux
+  brew install wget htop tmux reattach-to-user-namespace
   brew install git
   brew install ctags
 
