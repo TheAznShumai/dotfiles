@@ -49,6 +49,7 @@ Remove any descriptions from the README.md file
   brew install node
   npm install -g coffee-script
   npm install -g grunt-cli
+  npm install -g bower
   npm install -g yeoman
   npm install -g grunt-contrib-compass
   npm install -g generator-ember
