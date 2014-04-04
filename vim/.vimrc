@@ -61,8 +61,8 @@ autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
 
 set colorcolumn=80 "Mark colum 80
 
-"List of files to ignore (command T)
-set wildignore+=*.git,*.svn,*.o,*.obj,*.egg-info,*.tmp,*.bak,*.swp,*.pyc,app/assets/images/**,public/**,tmp/**
+"List of files to ignore
+set wildignore+=*.git,*.svn,*.o,*.obj,*.egg-info,*.tmp,*.bak,*.swp,*.pyc,tmp/**,public/**,node_modules/**,*/bower_components/**,vendor/**app/assets/images/**,public/**,tmp/**
 """""""""""""""
 "KEY BINDINGS"
 """""""""""""""
@@ -146,6 +146,11 @@ let g:syntastic_javascript_checkers=['jshint']
 """""""""""""""""""""
 
 function! <SID>StripTrailingWhitespaces()
+    " Only strip if the b:noStripWhiteSpace variable isn't set
+    if exists('b:noStripWhiteSpace')
+      return
+    endif
+
     " Preparation: save last search, and cursor position.
     let _s=@/
     let l = line(".")
@@ -157,7 +162,8 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+autocmd FileType emblem let b:noStripWhitespace=1 "keep whitespace for these filetypes
+autocmd BufWritePre * call <SID>StripTrailingWhitespaces()
 
 " Add key mapings to skip to next code fol
 " Use <leader>zj and <leader>zk
