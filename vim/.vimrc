@@ -66,6 +66,8 @@ set wildignore+=*.git,*.svn,*.o,*.obj,*.egg-info,*.tmp,*.bak,*.swp,*.pyc,tmp/**,
 """""""""""""""
 "KEY BINDINGS"
 """""""""""""""
+set pastetoggle=<F10>
+
 let mapleader=','
 map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>T :CommandTFlush<cr>\|:CommandT %%<cr>
